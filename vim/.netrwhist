@@ -1,2 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/tbugai/.rvm/gems/ruby-2.2.3/gems/rspec-wait-0.0.9/lib/rspec'
+let g:netrw_dirhist_2='/Users/tbugai/.rvm/gems/ruby-2.2.3/gems/rspec-wait-0.0.9/lib/rspec/wait'
+let g:netrw_dirhist_3='/Users/tbugai/Code/CollectiveIdea/Apple/Runway/retail'
+let g:netrw_dirhist_4='/Users/tbugai/Code/CollectiveIdea/Apple/Runway/retail/spec/support'
+let g:netrw_dirhist_5='/Users/tbugai/Code/CollectiveIdea/Apple/Runway/retail/spec'
+let g:netrw_dirhist_6='/Users/tbugai/Code/CollectiveIdea/Apple/Runway/retail/spec/support'
+let g:netrw_dirhist_7='/Users/tbugai/Code/CollectiveIdea/Apple/Runway/retail/config'
+let g:netrw_dirhist_8='/Users/tbugai/Code/CollectiveIdea/Apple/Runway/retail'
+let g:netrw_dirhist_9='/Users/tbugai'
