@@ -93,4 +93,7 @@ augroup cursorline
 augroup END
 
 autocmd! VimResized * :wincmd =
+autocmd BufWritePre * %s/\s\+$//e
+
+let g:agprg='ag -S --nocolor --nogroup --column --ignore node_modules --ignore _build'
 
