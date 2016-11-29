@@ -1,0 +1,40 @@
+[user]
+  name = Tim Bugai
+  email = tim@bugai.net
+[color]
+  ui = true
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  shove = push --force-with-lease
+[push]
+  default = current
+[core]
+  excludesfile = /Users/tbugai/.gitignore
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+[mergetool]
+[diff]
+  tool = Kaleidoscope
+[filter "hawser"]
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustexitcode = true
+[merge]
+  tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
+[filter "lfs"]
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
+[init]
+  templatedir = ~/.git
