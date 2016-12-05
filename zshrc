@@ -51,7 +51,7 @@ ZSH_THEME="bira"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler git postgres rails rake rvm)
+plugins=(bundler cdargs git postgres rails rake rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,11 +61,9 @@ export EDITOR=vim
 # Setup direnv
 eval "$(direnv hook zsh)"
 
-alias retail='cd ~/Code/CollectiveIdea/Apple/Runway/retail'
-alias channel='cd ~/Code/CollectiveIdea/Apple/Runway/channel'
-alias hardware='cd ~/Code/CollectiveIdea/Apple/Runway/hardware'
-
 # SilverSearcher
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # RVM
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
