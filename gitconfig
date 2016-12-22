@@ -9,7 +9,7 @@
 [push]
   default = current
 [core]
-  excludesfile = /Users/tbugai/.gitignore
+	excludesfile = /Users/tbugai/.gitignore
 [filter "media"]
   required = true
   clean = git media clean %f
