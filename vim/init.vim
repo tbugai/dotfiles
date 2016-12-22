@@ -2,7 +2,6 @@
 let mapleader="\<SPACE>"
 
 filetype plugin indent on
-
 syntax enable
 
 set autoindent
@@ -52,26 +51,37 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'altercation/vim-colors-solarized'
+
+" Plug 'altercation/vim-colors-solarized'
+let g:seoul256_background = 236
+Plug 'junegunn/seoul256.vim'
+
 Plug 'tpope/vim-endwise'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-commentary'
+Plug 'craigemery/vim-autotag'
+
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
 set background=dark
-colorscheme solarized
+colorscheme seoul256
 
+highlight Pmenu ctermfg=15 ctermbg=0 gui=bold guifg=#ffffff guibg=#000000
 let g:airline_powerline_fonts = 1
 
 nnoremap <silent> <leader><space> :Files<CR>
 nnoremap <silent> <leader>a :Buffers<CR>
 nnoremap <silent> <leader>? :History<CR>
-nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
-nnoremap <silent> <leader>s :nohlsearch<CR>
+nnoremap <silent> <leader>s :execute 'Ag ' . input('Ag/')<CR>
+nnoremap <silent> <Enter> :nohlsearch<CR>
+nnoremap <silent> <leader>t :execute 'tag ' . input('tag/')<CR>
+nnoremap <silent> <leader>j <C-]>
 
 " Run tests in a terminal
 let test#strategy = 'neovim'
