@@ -1,0 +1,7 @@
+package brew
+package direnv
+package fzf
+package rails
+package rvm
+theme bira
+theme default
