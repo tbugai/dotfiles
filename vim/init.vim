@@ -51,6 +51,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" Plug 'scrooloose/syntastic'
+" Plug 'gcorne/vim-sass-lint'
+" let g:syntastic_sass_checkers=["sasslint"]
+" let g:syntastic_scss_checkers=["sasslint"]
+Plug 'neomake/neomake'
+let g:neomake_scss_enabled_makers=["sasslint"]
 
 " Plug 'altercation/vim-colors-solarized'
 let g:seoul256_background = 236
@@ -104,6 +110,7 @@ augroup END
 
 autocmd! VimResized * :wincmd =
 autocmd BufWritePre * %s/\s\+$//e
+autocmd! BufWritePost * Neomake
 
 let g:agprg='ag -S --nocolor --nogroup --column --ignore node_modules --ignore _build'
 
