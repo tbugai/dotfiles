@@ -5,3 +5,4 @@ package rails
 package rvm
 theme bira
 theme default
+theme eden

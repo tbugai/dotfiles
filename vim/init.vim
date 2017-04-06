@@ -14,7 +14,6 @@ set hlsearch            " Highlight search results.
 set ignorecase          " Make searching case insensitive
 set smartcase           " ... unless the query has capital letters.
 set incsearch           " Incremental search.
-set gdefault            " Use 'g' flag by default with :s/foo/bar/.
 set magic               " Use 'magic' patterns (extended regular expressions).
 set noerrorbells
 set splitright
@@ -22,7 +21,7 @@ set splitbelow
 set list
 set listchars+=eol:\          " character to list at the end of each line
 set listchars+=tab:\ \        " character to list a <Tab>
-set listchars+=trail:·        " character to list trailing spacesku
+set listchars+=trail:·        " character to list trailing spaces
 set scrolloff=3
 
 noremap <Up> <Nop>
@@ -51,12 +50,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'scrooloose/syntastic'
-" Plug 'gcorne/vim-sass-lint'
-" let g:syntastic_sass_checkers=["sasslint"]
-" let g:syntastic_scss_checkers=["sasslint"]
 Plug 'neomake/neomake'
 let g:neomake_scss_enabled_makers=["sasslint"]
+let g:neomake_ruby_enabled_makers=[]
 
 " Plug 'altercation/vim-colors-solarized'
 let g:seoul256_background = 236
@@ -69,6 +65,7 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
 Plug 'craigemery/vim-autotag'
 
 Plug 'Valloric/YouCompleteMe'
@@ -96,6 +93,7 @@ nmap <silent> <leader>tf :TestFile<CR>
 nmap <silent> <leader>ta :TestSuite<CR>
 nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tv :TestVisit<CR>
+
 
 augroup vimconfig
   au!
