@@ -46,27 +46,28 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-repeat'
 Plug 'sheerun/vim-polyglot'
 Plug 'janko-m/vim-test'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neomake/neomake'
 let g:neomake_scss_enabled_makers=["sasslint"]
 let g:neomake_ruby_enabled_makers=[]
 
-" Plug 'altercation/vim-colors-solarized'
+let g:ruby_indent_assignment_style = 'variable'
+
 let g:seoul256_background = 236
 Plug 'junegunn/seoul256.vim'
 
 Plug 'tpope/vim-endwise'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
+Plug 'itchyny/lightline.vim'
 Plug 'craigemery/vim-autotag'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-repeat'
 
 Plug 'Valloric/YouCompleteMe'
 
@@ -86,13 +87,13 @@ nnoremap <silent> <Enter> :nohlsearch<CR>
 nnoremap <silent> <leader>t :execute 'tag ' . input('tag/')<CR>
 nnoremap <silent> <leader>j <C-]>
 
-" Run tests in a terminal
-let test#strategy = 'neovim'
-nmap <silent> <leader>tn :TestNearest<CR>
-nmap <silent> <leader>tf :TestFile<CR>
-nmap <silent> <leader>ta :TestSuite<CR>
-nmap <silent> <leader>tl :TestLast<CR>
-nmap <silent> <leader>tv :TestVisit<CR>
+" " Run tests in a terminal
+" let test#strategy = 'neovim'
+" nmap <silent> <leader>tn :TestNearest<CR>
+" nmap <silent> <leader>tf :TestFile<CR>
+" nmap <silent> <leader>ta :TestSuite<CR>
+" nmap <silent> <leader>tl :TestLast<CR>
+" nmap <silent> <leader>tv :TestVisit<CR>
 
 
 augroup vimconfig
@@ -110,5 +111,5 @@ autocmd! VimResized * :wincmd =
 autocmd BufWritePre * %s/\s\+$//e
 autocmd! BufWritePost * Neomake
 
-let g:agprg='ag -S --nocolor --nogroup --column --ignore node_modules --ignore _build'
+let $FZF_DEFAULT_COMMAND="ag -g ''"
 
