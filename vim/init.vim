@@ -88,6 +88,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'craigemery/vim-autotag'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-repeat'
+Plug 'terryma/vim-multiple-cursors'
 
 " Bubble lines of text up and down, indent and outdent
 Plug 'frace/vim-bubbles'
