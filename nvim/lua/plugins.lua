@@ -33,4 +33,5 @@ require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
   use 'preservim/nerdtree'
+  use { "beauwilliams/focus.nvim", config = function() require("focus").setup() end }
 end)

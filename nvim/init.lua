@@ -22,6 +22,7 @@ require('settings.defaults')
 
 require('settings.autocomplete')
 require('settings.diagnostics')
+require('settings.focus')
 require('settings.lsp')
 require('settings.nerdtree')
 require('settings.statusbar')
