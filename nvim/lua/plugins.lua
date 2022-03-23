@@ -22,7 +22,11 @@ require('packer').startup(function(use)
 
   -- Additional textobjects for treesitter
   use 'nvim-treesitter/nvim-treesitter-textobjects'
+
+  -- LSP management plugins
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  use 'kabouzeid/nvim-lspinstall' -- LSP server installer
+
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
