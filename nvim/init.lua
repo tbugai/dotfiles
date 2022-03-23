@@ -19,16 +19,16 @@ vim.g.maplocalleader = ' '
 
 require('plugins')
 require('settings.defaults')
-require('settings.statusbar')
+
+require('settings.autocomplete')
+require('settings.diagnostics')
+require('settings.lsp')
 require('settings.nerdtree')
+require('settings.statusbar')
+require('settings.telescope')
+require('settings.treesitter')
 
 --Enable Comment.nvim
 require('Comment').setup()
-
-require('settings.telescope')
-require('settings.treesitter')
-require('settings.lsp')
-require('settings.autocomplete')
-require('settings.diagnostics')
 
 -- vim: ts=2 sts=2 sw=2 et
