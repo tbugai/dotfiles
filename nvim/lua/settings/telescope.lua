@@ -1,17 +1,34 @@
 --Telescope
 require('telescope').setup {
   defaults = {
+    file_ignore_patterns = { "node_modules" },
     mappings = {
       i = {
-        ['<C-u>'] = false,
-        ['<C-d>'] = false,
+        ["C-u"] = false
       },
     },
   },
+  pickers = {
+    lsp_code_actions = {
+      theme = "dropdown"
+    },
+    find_files = {
+      theme = "dropdown"
+    }
+  },
+
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+        -- even more opts
+      }
+    }
+  }
 }
 
 -- Enable telescope fzf native
 require('telescope').load_extension 'fzf'
+require('telescope').load_extension 'ui-select'
 
 --Add leader shortcuts
 vim.api.nvim_set_keymap('n', '<leader>l', [[<cmd>lua require('telescope.builtin').buffers({ sort_mru = true, ignore_current_buffer = true })<CR>]], { noremap = true, silent = true })

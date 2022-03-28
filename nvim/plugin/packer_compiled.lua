@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/tbugai/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["auto_mkdir2.vim"] = {
+    loaded = true,
+    path = "/Users/tbugai/.local/share/nvim/site/pack/packer/start/auto_mkdir2.vim",
+    url = "https://github.com/arp242/auto_mkdir2.vim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/tbugai/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -159,6 +164,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tbugai/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/Users/tbugai/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
