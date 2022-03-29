@@ -1,30 +1,27 @@
---Set highlight on search
-vim.o.hlsearch = true
+local INDENT = 2
 
---Make line numbers default
-vim.wo.number = true
+vim.opt.tabstop = INDENT
+vim.opt.softtabstop = INDENT
+vim.opt.shiftwidth = INDENT
+vim.opt.expandtab = true
 
---Enable mouse mode
-vim.o.mouse = 'a'
+vim.opt.number = true
 
---Enable break indent
-vim.o.breakindent = true
+vim.cmd [[
+  set termguicolors
+  set background=dark
+  colorscheme nordfox
+]]
 
---Save undo history
-vim.opt.undofile = true
-
---Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
---Decrease update time
-vim.o.updatetime = 250
-vim.wo.signcolumn = 'yes'
-
---Set colorscheme
-vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
-
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
-
+require("settings.lualine-rc")
+require("settings.telescope-rc")
+require("settings.formatter-rc")
+require("settings.completion-rc")
+require("settings.lsp-colors-rc")
+require("settings.lsp-installer-rc")
+require("settings.lspsaga-rc")
+require("settings.treesitter-rc")
+--require("settings.tree-rc")
+require("settings.autopairs-rc")
+require("settings.autotag-rc")
+require("settings.dashboard-rc")

@@ -1,39 +1,42 @@
-require('packer').startup(function(use)
-  use {'wbthomason/packer.nvim'} -- Package manager
-  use {'tpope/vim-fugitive'} -- Git commands in nvim
-  use {'tpope/vim-rhubarb'} -- Fugitive-companion to interact with github
-  use {'numToStr/Comment.nvim'} -- "gc" to comment visual regions/lines
-  use {'ludovicchabant/vim-gutentags'} -- Automatic tags management
+require("packer").startup(
+  function(use)
+    use {"wbthomason/packer.nvim"} -- Package manager
+    use {"EdenEast/nightfox.nvim"} -- Colorscheme
 
-  -- UI to select things (files, grep results, open buffers...)
-  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use {'nvim-telescope/telescope-ui-select.nvim' }
-  use {'mjlbach/onedark.nvim'} -- Theme inspired by Atom
-  use {'nvim-lualine/lualine.nvim'} -- Fancier statusline
+    use {"hoob3rt/lualine.nvim", requires = {"kyazdani42/nvim-web-devicons", opt = true}}
+    use {
+      "kyazdani42/nvim-tree.lua",
+      requires = {
+        "kyazdani42/nvim-web-devicons" -- optional, for file icon
+      }
+    }
 
-  -- Add indentation guides even on blank lines
-  use {'lukas-reineke/indent-blankline.nvim'}
+    use {"neovim/nvim-lspconfig"}
+    use {"williamboman/nvim-lsp-installer"}
 
-  -- Add git related info in the signs columns and popups
-  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+    use {"tami5/lspsaga.nvim"}
+    use {"folke/lsp-colors.nvim"}
 
-  -- Highlight, edit, and navigate code using a fast incremental parsing library
-  use {'nvim-treesitter/nvim-treesitter'}
+    use {"L3MON4D3/LuaSnip"} -- Snippets
 
-  -- Additional textobjects for treesitter
-  use {'nvim-treesitter/nvim-treesitter-textobjects'}
+    use {"hrsh7th/cmp-nvim-lsp"}
+    use {"hrsh7th/cmp-buffer"}
+    use {"hrsh7th/nvim-cmp"} -- Autocompletion
 
-  -- LSP management plugins
-  use {'neovim/nvim-lspconfig'} -- Collection of configurations for built-in LSP client
-  use {'williamboman/nvim-lsp-installer'}
+    use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+    --  use {'onsails/lspkind-nvim'}
 
-  use {'hrsh7th/nvim-cmp'} -- Autocompletion plugin
-  use {'hrsh7th/cmp-nvim-lsp'}
-  use {'saadparwaiz1/cmp_luasnip'}
-  use {'L3MON4D3/LuaSnip'} -- Snippets plugin
+    use {
+      "nvim-telescope/telescope.nvim",
+      requires = {
+        {"nvim-lua/popup.nvim"},
+        {"nvim-lua/plenary.nvim"},
+        {"nvim-telescope/telescope-fzy-native.nvim"}
+      }
+    }
 
-  use {'preservim/nerdtree'}
-  use { "beauwilliams/focus.nvim", config = function() require("focus").setup() end }
-  use { 'arp242/auto_mkdir2.vim' } -- Create directories if they don't exist
-end)
+    use {"mhartington/formatter.nvim"}
+    use {"windwp/nvim-autopairs"}
+    use {"windwp/nvim-ts-autotag"}
+  end
+)

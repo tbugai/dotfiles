@@ -18,4 +18,18 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 require("plugins")
-require("settings")
+require("settings.defaults")
+
+require("settings.autocomplete")
+require("settings.diagnostics")
+require("settings.focus")
+require("settings.lsp")
+require("settings.nerdtree")
+require("settings.statusbar")
+require("settings.telescope")
+require("settings.treesitter")
+
+--Enable Comment.nvim
+require("Comment").setup()
+
+-- vim: ts=2 sts=2 sw=2 et
