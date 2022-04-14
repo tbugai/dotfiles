@@ -3,4 +3,29 @@ if (not status) then
   return
 end
 
-autotag.setup({})
+local filetypes = {
+  "eruby",
+  "html",
+  "javascript",
+  "typescript",
+  "javascriptreact",
+  "typescriptreact",
+  "svelte",
+  "vue",
+  "tsx",
+  "jsx",
+  "rescript",
+  "xml",
+  "php",
+  "markdown",
+  "glimmer",
+  "handlebars",
+  "hbs"
+}
+
+autotag.setup(
+  {
+    enable = true,
+    filetypes = filetypes
+  }
+)

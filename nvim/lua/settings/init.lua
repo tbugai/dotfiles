@@ -13,15 +13,15 @@ vim.cmd [[
   colorscheme nordfox
 ]]
 
-require("settings.lualine-rc")
 require("settings.telescope-rc")
-require("settings.formatter-rc")
-require("settings.completion-rc")
+require("settings.treesitter-rc")
 require("settings.lsp-colors-rc")
 require("settings.lsp-installer-rc")
 require("settings.lspsaga-rc")
-require("settings.treesitter-rc")
+require("settings.completion-rc")
+require("settings.formatter-rc")
 --require("settings.tree-rc")
 require("settings.autopairs-rc")
 require("settings.autotag-rc")
-require("settings.dashboard-rc")
+
+require("settings.lualine-rc")
